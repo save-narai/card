@@ -117,7 +117,7 @@ svg {
     display: flex; /* Utiliza flexbox para disposición */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
-    right: -20px;
+    right: -70px;
 }
 
 /* Estilos para los slides del slider */

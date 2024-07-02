@@ -201,9 +201,14 @@
   
 
 
+      <div class="container arcoiris-container">
+    <div class="row">
+        <div class="col-12">
+            <a href="#" class="btn-estructura" id="btnCarrito">Carrito <span class="badge bg-success" id="carrito">0</span></a>
+        </div>
+    </div>
+</div>
 
-
-      <a href="#" class="btn-flotante" id="btnCarrito">Carrito <span class="badge bg-success" id="carrito">0</span></a>
 
 
 <section class="py-5">

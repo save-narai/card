@@ -107,18 +107,18 @@ svg {
 .menu-icons img:hover {
     transform: scale(1.2); /* Aumenta tamaño al pasar el cursor */
 }
-
-/* Estilos para el contenedor del slider */
 .slider {
-    width: calc(200% - 110px); /* Ancho calculado */
+    width: calc(150% - 110px); /* Ancho reducido */
     height: 140vh; /* Altura del slider */
     margin: 0 0 0 20px; /* Márgenes del slider */
     position: relative; /* Posición relativa */
     display: flex; /* Utiliza flexbox para disposición */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
-    right: -20px;
+    left: -35px; /* Mueve el slider 35px hacia la izquierda */
 }
+
+
 
 /* Estilos para los slides del slider */
 .slide {
