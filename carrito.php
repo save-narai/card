@@ -62,8 +62,8 @@ require_once "config/config.php";
                 </div>
                 <div class="col-md-5 ms-auto">
                     <h4>Total a Pagar: <span id="total_pagar">0.00</span></h4>
+                    <div id="paypal-button-container"></div>
                     <div class="d-grid gap-2">
-                        <div id="paypal-button-container"></div>
                         <button class="btn btn-warning" type="button" id="btnVaciar">Vaciar Carrito</button>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ require_once "config/config.php";
     </section>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="https://www.paypal.com/sdk/js?client-id=<?php echo CLIENT_ID; ?>&locale=<?php echo LOCALE; ?>"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZiQI3C-ZQ6ncTMiEieLOKX1vftFq4hJY5CMvoO4hLNkTLHtvjG-0-pnSBpyEoI3AMb7dnBFC-nnPbbb"></script>
     <script src="assets/js/scripts.js"></script>
     <script>
         mostrarCarrito();
@@ -106,6 +106,8 @@ require_once "config/config.php";
                             });
                             $('#tblCarrito').html(html);
                             $('#total_pagar').text(res.total);
+                            
+                            // Inicializar y renderizar el botón de PayPal después de obtener la respuesta
                             paypal.Buttons({
                                 style: {
                                     color: 'blue',
@@ -113,7 +115,6 @@ require_once "config/config.php";
                                     label: 'pay'
                                 },
                                 createOrder: function(data, actions) {
-                                    // This function sets up the details of the transaction, including the amount and line item details.
                                     return actions.order.create({
                                         purchase_units: [{
                                             amount: {
@@ -123,9 +124,7 @@ require_once "config/config.php";
                                     });
                                 },
                                 onApprove: function(data, actions) {
-                                    // This function captures the funds from the transaction.
                                     return actions.order.capture().then(function(details) {
-                                        // This function shows a transaction success message to your buyer.
                                         alert('Transaction completed by ' + details.payer.name.given_name);
                                     });
                                 }

@@ -34,7 +34,7 @@
     <section>
         <div class="dj-banner">
             <div class="dj-bg">
-                <img src="img/1334619.jpeg" alt="Principal Image" class="dj-img"/>
+                <img src="img/contacto.png" alt="Principal Image" class="dj-img"/>
                 <div class="dj-text">
                     <h1><b>Contactanos</b></h1>
                 </div>

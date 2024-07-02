@@ -29,7 +29,6 @@
         <div class="logo"><img src="img/logo.png" alt="Logo"></div>
         <ul class="menu-area">
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="productos.php">productos</a></li>
             <li><a href="Nosotros.php">Nosotros</a></li>
             <li><a href="contacto.php">Contacto</a></li>
         </ul>
